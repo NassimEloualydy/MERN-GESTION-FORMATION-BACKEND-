@@ -1,0 +1,178 @@
+import React,{useState} from 'react'
+import Menu from "../Menu/Menu"
+import {API_URL} from "../config";
+import toastr from 'toastr';
+import "toastr/build/toastr.css";
+import { ImBin,ImPencil,ImNotification } from "react-icons/im";
+import {IoIosMenu} from "react-icons/io";
+const Group=()=>{
+    const [menu,setMenu]=useState(true);
+    const [formulaire,setFormulaire]=useState(true);
+    const [formulaireBtn,setFormulaireBtn]=useState("Ajouter");
+    const showMenu=()=>{
+        setMenu(false)
+      }
+      const hideMenu=()=>{
+        setMenu(true);
+      }
+      const showFormulaire=()=>{
+        setFormulaire(false);
+      }
+      const hideFormulaire=()=>{
+        setFormulaire(true);
+        setFormulaireBtn("Ajouter");
+      }
+  
+  return (
+    <div className="containerDashbord">
+    <Menu hideMenu={hideMenu} menu={menu}/>
+    <div className="bodyDahbord">
+
+    <IoIosMenu onClick={showMenu} className="IconMenu"/>
+    <div className={formulaire?"formulaire":"showFormulaire"}>
+      <center>
+        <h3>Formulaire Filier</h3>
+        <br/>
+        <div className="continer_input_formulaire">
+          <div>Nom: </div>
+          <input type="text" name="nom"  className="inputFormulaire" />
+        </div>
+        <br />
+        <div className="continer_input_formulaire">
+          <div>Niveau: </div>
+          <select name="niveau"  className="inputFormulaire">
+           <option value="">Choisire un niveau</option>
+           <option value="S1">S1</option>
+           <option value="S2">S2</option>
+           <option value="S3">S3</option>
+           <option value="S4">S4</option>
+           <option value="S5">S5</option>
+           <option value="S6">S6</option>
+          </select>
+        </div>
+<br />
+         <div className="continer_input_formulaire">
+          <div>Nombre Etudient Maximale: </div>
+          <input type="text" name="nbrEtudientMax"   className="inputFormulaire" />
+         </div>
+         <br />
+         <div className="continer_input_formulaire">
+          <div>Nombre Des Annee: </div>
+          <input type="text" name="nbrAnnee"   className="inputFormulaire" />
+         </div>
+
+        <br/>
+        <input type="button" value={formulaireBtn}  className='inputBtnFormulaire' />&nbsp;
+        <input type="button" value="Annuler" onClick={hideFormulaire} className='inputBtnFormulaire' />
+      </center>
+    </div>
+    <center>
+      <br />
+      <br />
+      <h3 className="title_chart">Les statestic</h3>
+    <div className="containet_chart">
+        <div className="chart_item">
+          <div className="container_chart_item">
+            <h3>Totale :</h3>
+            <p>40</p>
+          </div>
+        </div>
+        <div className="chart_item">
+          <div className="container_chart_item">
+          <h3>Totale des etudient :</h3>
+            <p>10</p>
+
+          </div>
+        </div>
+        <div className="chart_item">
+          <div className="container_chart_item">
+          <h3>Les déférent filier :</h3>
+            <p>12</p>
+
+          </div>
+        </div>
+    </div>
+    <br />
+    <div className="container_list">
+
+   <div className="list">
+    <div className="list_table">
+      <div className="bar_recherch">
+        <center>
+          <h3>La bare de recherch</h3>
+          <div className="contianerInputSearch">
+                 <input type="text" name="nom" placeholder='nom' id=""   className="inputSearch" />
+                <select name="niveau" style={{width:"44%"}}   className="inputSearch">
+           <option value="">Choisire un niveau</option>
+           <option value="S1">S1</option>
+           <option value="S2">S2</option>
+           <option value="S3">S3</option>
+           <option value="S4">S4</option>
+           <option value="S5">S5</option>
+           <option value="S6">S6</option>
+          </select>
+          </div>
+          <br />
+          <div className="contianerInputSearch">
+                 <input type="text" name="nbrEtudientMax" placeholder='Nombre Etudient'   className="inputSearch" />
+                 <input type="text" name="nbrAnnee" placeholder='Nombre des annee'  className="inputSearch" />
+          </div>
+          <br />
+          <input type="Button" value="Chercher"  className="inputBtnSearch" />
+
+        </center>
+      </div>
+     <input type="Button" value="Novelle" onClick={showFormulaire} className="btn_mewItem" />
+     <br />
+     <br />
+     
+     <table>
+      <tbody>
+ 
+      <tr id="header">
+          <th>Nom</th>
+          <th>Niveau</th>
+          <th>N Etudient</th>
+          <th>N Annee</th>
+          <th colSpan={2}>Option</th>
+      </tr>
+      
+      {/* {
+        filiers.map((f,i)=>(
+          <tr key={i}>
+          <td>{f.nom} </td>
+          <td>{f.niveau} </td>
+          <td>{f.nbrEtudientMax} </td>
+          <td>{f.nbrAnnee} </td>
+          <td><ImBin onClick={deleteFilier.bind(this,f._id)}  className="Icon Icon_delete"/></td>
+          <td><ImPencil onClick={updateFilier.bind(this,f)}  className="Icon Icon_update"/></td>
+      </tr>
+
+        )) */}
+      {/* } */}
+      </tbody>
+
+  </table>
+
+       </div>
+       <br />
+         {/* <input type="button" onClick={pagination.bind(this,-5)} value="<"  className="btn_pagination" />
+
+{filiers.length==5?(
+         <input type="button" onClick={pagination.bind(this,+5)} value=">"  className="btn_pagination" />
+       ):<input type="button" value=">"  className="btn_pagination" />
+       }
+ */}
+
+       </div>
+       <br />
+       
+    </div>
+       {/* here */}
+    </center>
+    </div>
+  </div>
+  )
+}
+
+export default Group

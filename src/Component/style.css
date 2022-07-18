@@ -1,0 +1,846 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+
+}
+body{
+    overflow: hidden;
+}
+.body{
+    width: 100%;
+    height: 100vh;
+}
+.container_body{
+    position: relative;
+    width: 200%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    right: 0%;
+    transition:.3s;
+}
+.connexion{
+    position: relative;
+    width: 200%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    right: 0%;
+    transition:.3s;
+
+}
+.inscription{
+    position: relative;
+    width: 200%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    right: 100%;
+    transition:.3s;
+
+}
+.container_login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition:.3s;
+    
+}
+.box_login{
+    width:50%;
+    height: 100vh;
+    transition:.3s;
+    
+}
+.box_login_img{
+    width:50%;
+    height: 100vh;
+    transition:.3s;
+}
+.box_login_img:nth-child(1){
+    background-image: url('../Component/images/connexion.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.box_login_img:nth-child(2){
+    background-image: url('../Component/images/inscription.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+/* .box_login:nth-child(2){
+    background-color: rgb(6, 1, 27);
+}
+.box_login:nth-child(3){
+    background-color: rgb(6, 1, 27);
+
+} */
+.constianer_box_login{
+    position: relative;
+    height: 100vh;
+    width: 200%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.constianer_box_login_item{
+    width: 50%;
+    height: 100vh;
+}
+
+.btn_input_login{
+    width: 60%;
+    height: 10%;
+    font-size:100%;
+    padding: 5px 0px;
+    border: 1px solid rgb(6, 1, 27);
+    border-radius:10px;
+    color: rgb(6, 1, 27);
+    background-color:white;
+    transition:.3s;
+}
+
+.btn_input_login:hover{
+    width: 60%;
+    height: 10%;
+    font-size:100%;
+    padding: 5px 0px;
+    border: 1px solid rgb(6, 1, 27);
+    border-radius:10px;
+    background-color:transparent;
+    color: white;
+    background-color:rgb(6, 1, 27);
+    transition:.3s;
+}
+.containerInputLogin{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width:50%;
+    margin-bottom:5%;
+    padding: 5px;
+    transition:.3s;
+}
+.inputLogin{
+    width: 60%;
+    height: 35px;
+    border:none;
+    border-bottom: 1px solid rgb(6, 1, 27);
+        
+}
+.containerDashbord{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    transition:.3s;
+}
+.menu{
+    color:white;
+    height: 100vh;
+    width: 20%;
+    overflow: hidden;
+    background-color: rgb(6, 1, 27);
+    transition:.3s;
+
+}
+.showMenu{
+    color:white;
+    height: 100vh;
+    width: 20%;
+    overflow: hidden;
+    background-color: rgb(6, 1, 27);
+    transition:.3s;
+    
+}
+
+.bodyDahbord{
+    height: 100vh;
+    width: 80%;
+   transition:.3s;
+   overflow-x: hidden;
+   overflow-y: scroll;
+}
+.menu_item{
+    width: 90%;
+    height: 50px;
+    color: white;
+    background-color: rgb(6, 1, 27);
+    cursor: pointer;
+    line-height: 50px;
+    border-radius:5px;
+    transition:.3s;
+
+}
+.menu_item-img{
+    height: 70px;
+    line-height: 70px;
+}
+.container_menu_item{
+    display: flex;
+    justify-content:space-between;
+    width: 80%;
+}
+
+.icon_menu{
+    margin-top:5%;
+}
+.menu_item:hover{
+    color: rgb(6, 1, 27);
+    background-color: white;
+    transition:.3s;
+}
+.compt_admin{
+    width: 80px;
+    height: 80px;
+    border-radius:80px;
+    border: 1px solid black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.IconMenu{
+    position: absolute;
+    font-size:250%;
+    top: 5%;
+    right: 5%;
+    z-index: 1;
+    visibility: hidden;
+    transition: .3s;
+    cursor: pointer;
+}
+.IconMenu:hover{
+    color: rgb(6, 1, 27);
+  transition:.3s;   
+}
+.formulaire{
+    height: 100vh;
+    width: 20%;
+    background-color:rgb(6, 1, 27);
+    position: absolute;
+    top: 0;
+    right: -20%;
+    transition:.3s;
+    z-index: 555;
+    color:white;
+}
+.showFormulaire{
+    height: 100vh;
+    width: 20%;
+    background-color:rgb(6, 1, 27);
+    position: absolute;
+    top: 0;
+    right: 0%;
+    transition:.3s;
+    z-index: 555;
+    color:white;
+
+}
+
+.btn_mewItem{
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  padding: 5px;
+  background-color:white;
+  color: rgb(6, 1, 27);
+  border: 1px solid rgb(6, 1, 27); 
+  border-radius:5px;
+  transition:.3s;   
+}
+.inputBtnSearch{
+    padding: 5px;
+    background-color:white;
+    color: rgb(6, 1, 27);
+    border: 1px solid rgb(6, 1, 27); 
+    border-radius:5px;
+    transition:.3s;   
+  
+}
+.btn_mewItem:hover,.inputBtnSearch:hover{
+    background-color:rgb(6, 1, 27);
+    color: white;
+    transition:.3s;
+}
+
+.inputFormulaire{
+    width: 90%;
+    color: white;
+    border: 1px solid rgb(6, 1, 27);
+    border-bottom:1px solid white; ;
+    background-color: rgb(6, 1, 27);
+    outline: none;
+}
+.inputFormulaireCompt{
+    width: 90%;
+    border: 1px solid white;
+    border-bottom:1px solid rgb(6, 1, 27); ;
+    background-color: white;
+    outline: none;
+}
+.continer_input_formulaire{
+    margin-left: 5%;
+    width: 90%;
+    display: block;
+    text-align:left;
+}
+.inputBtnFormulaire{
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(6, 1, 27);
+    transition:.3s;
+}
+.inputBtnFormulaire:hover{
+color: rgb(6, 1, 27);
+background-color:white;
+transition:.3s;
+}
+.list_table table {
+    border-collapse: collapse;
+    width: 90%;
+    height: 200px;
+    border: 1px solid #bdc3c7;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list_table tr {
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.list_table  th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.list_table #header {
+    background-color: rgb(6, 1, 27);
+    color: #fff;
+}
+
+
+.list_table tr:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+.body_table{
+    height: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+.btn_pagination{
+    font-size:100%;
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: rgb(6, 1, 27);
+    border: 1px solid rgb(6, 1, 27);
+    border-radius:5px;
+    color: white;
+    cursor: pointer;
+    transition:.3s;
+    margin: 5px;
+}
+.btn_pagination:hover{
+    background-color:white;
+    color: rgb(6, 1, 27);
+
+    transition:.3s;
+}
+.Icon{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px ;
+  }
+  .Icon_delete{
+    color: rgb(163, 4, 4);
+    border-color: rgb(163, 4, 4);
+    transition: .3s;
+    cursor: pointer;
+  }
+  .Icon_delete:hover{
+      background-color: rgb(163, 4, 4);
+      color: white;
+      transition: .3s;
+    }
+    .Icon_update{
+      color: rgb(195, 224, 31);
+      border-color: rgb(195, 224, 31);
+      transition: .3s;
+      cursor: pointer;
+    }
+    .Icon_update:hover{
+        background-color: rgb(195, 224, 31);
+        color: white;
+        transition: .3s;
+      }
+      .Icon_details{
+          color: rgb(127, 193, 255);
+          border-color: aquamarine;
+          transition: .3s;
+          cursor: pointer;
+        }
+        .Icon_details:hover{
+            background-color: aquamarine;
+            color: white;
+            transition: .3s;
+          }
+          .Icon_email{
+            color: rgb(255, 127, 127);
+            border-color: rgb(255, 127, 127);
+            transition: .3s;
+            cursor: pointer;
+          }
+          .Icon_email:hover{
+              background-color: rgb(255, 127, 127);
+              color: white;
+              transition: .3s;
+            }
+  
+        .container_list{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width:90%;
+            padding: 10px;
+            transition: .3s;
+            height: auto !important;
+        }
+        .list{
+            height: 60vh;
+            width: 90%;
+            position: relative;
+            border-radius: 5px;
+            transition: .3s;
+
+        }
+        .items{
+            position: relative;
+            
+            width: 30%;
+            height: 90vh;
+            border: 1px solid black;
+           border-radius: 5px;
+           transition: .3s;
+
+        }
+/* @media */
+.contianerInputSearch{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    width: 90%;
+    transition:.3s;
+}
+.inputSearch{
+    width:40%;
+    padding: 5px 10px;
+    border: 1px solid rgb(6, 1, 27);
+    border-radius: 5px;
+    transition:.3s;
+}
+.selectInput{
+    width:43%;
+}
+.containet_chart{
+    height: 10vh;
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    position: relative;
+    transition: .3s;
+}
+.title_chart{
+ text-align: left;
+  margin-left: 10%;
+}
+.chart_item{
+    height: 90%;
+    width:30%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.container_chart_item{
+    width: 90%;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.detailForm{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(6, 1, 27);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition:.3s;
+    z-index: 555;
+    color:white;
+}
+.showDailForm{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(6, 1, 27);
+    position: absolute;
+    top: 0;
+    right: 0%;
+    transition:.3s;
+    z-index: 555;
+    color:white;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.containerDetail{
+   width: 40%;
+   height: 80vh;
+   border: 1px solid white;
+   border-radius:5px;
+   transition: .3s;
+}
+.conatinerInputDetail{
+    margin: 5px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container_chart_bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .3s;
+}
+.barItem{
+    height: 100%;
+   width: 45%;
+}
+.image_table{
+    height: 50px;
+    width:50px;
+    border-radius:50px;
+    border: 1px solid black;
+}
+.image_table_detail{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius:100px;
+    text-align: center;
+}
+.emailCard{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(6, 1, 27);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition:.3s;
+    z-index: 555;
+    color:white;
+}
+.showemailCard{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(6, 1, 27);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition:.3s;
+    z-index: 555;
+    color:white;
+
+}
+.containerModule{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    width: 100%;
+}
+.formateur{
+    height: 70vh;
+    width: 75%;
+    border: 1px solid white;
+    border-radius:5px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    transition:.3s;
+}
+.DetailItemModule{
+    width: 47%;
+    height:47vh;
+    transition: .3s;
+    border: 1px solid white;
+   border-radius: 5px;
+}
+.formateurD{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    height: 42vh;
+}
+.formateurDitem{
+    width: 45%;
+    height:40vh;
+    transition: .3s;
+}
+.infoItemContainer{
+    width: 80%;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.DetailModuleImg{
+    height: 180px;
+    width: 180px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: .3s;
+    object-fit: cover;
+}
+@media (max-width:1000px){
+
+    .DetailModuleImg{
+        height: 80px;
+        width: 80px;
+        border: 1px solid white;
+        border-radius: 5px;
+        transition: .3s;
+    }    .formateur{
+        height: 95vh;
+        width: 80%;
+        border: 1px solid white;
+        border-radius:5px;
+        display:block;
+        justify-content:center;
+        align-items:center;
+        transition:.3s;
+    }
+    .DetailItemModule{
+        width: 90%;
+        height:40vh;
+        transition: .3s;
+        border: 1px solid white;
+    
+    }
+    .moduleD{
+        height: 45vh;
+    }
+    .moduleV{
+        height: 48vh;
+    }
+    .contianerInputSearch{
+        display: block;
+        align-items:center;
+        width: 90%;
+        transition:.3s;
+    }
+    .inputSearch{
+        width:90%;
+        padding: 5px 10px;
+        border: 1px solid rgb(6, 1, 27);
+        border-radius: 5px;
+        transition:.3s;
+    }
+    .selectInput{
+        width:95%;
+    }
+    
+    .container_chart_bar{
+        width: 100%;
+        display: block;
+        transition: .3s;
+    }
+    .barItem{
+        height: 100%;
+       width: 90%;
+    }
+    .containerDetail{
+        width: 80%;
+        height: 90vh;
+        border: 1px solid white;
+        border-radius:5px;
+        transition: .3s;
+     }
+    .tableList{
+        width: 90%;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .containet_chart{
+        height: 30vh;
+        width: 90%;
+        border-radius: 5px;
+        display: block;
+        align-items: center;
+        position: relative;
+        transition: .3s;
+    }
+    /* .title_chart{
+    } */
+    .chart_item{
+        height: 30%;
+        width:100%;
+        border: 1px solid black;
+        border-radius: 5px;
+        transition: .3s;
+        margin: 5px;
+    }
+    
+    .items{
+        position: relative;
+        
+        width: 90%;
+        height: 90vh;
+        border: 1px solid black;
+       border-radius: 5px;
+       transition: .3s;
+       margin-top: 15rem;
+    }
+    .list_table{
+        width:90%;
+        overflow: hidden;
+        /* overflow-x:scroll; */
+    }
+    .container_list{
+        display: block;
+        align-items: center;
+        width:90%;
+        height: 150vh;
+        padding: 10px;
+        transition: .3s;
+    }
+    .list{
+        height: 60vh;
+        width: 90%;
+        position: relative;
+        border-radius: 5px;
+        transition: .3s;
+
+    }
+    .list table {
+        width: 90%;
+    }
+    .formulaire{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(6, 1, 27);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition:.3s;
+    z-index: 555;
+    color:white;
+
+}
+.showFormulaire{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(6, 1, 27);
+    position: absolute;
+    top: 0;
+    right: 0%;
+    transition:.3s;
+    z-index: 555;
+    color:white;
+
+}
+
+    .IconMenu{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        z-index: 1;
+        visibility: visible;
+        transition: .3s;
+    }
+    .menu_item{
+        width: 80%;
+        height: 50px;
+        color: white;
+        background-color: rgb(6, 1, 27);
+        cursor: pointer;
+        line-height: 50px;
+        transition:.3s;
+        border-radius:5px;
+    }
+    .icon_menu{
+        margin-top:3%;
+    }
+    
+    .containerDashbord{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        align-items:center;
+        transition:.3s;
+    }
+    .menu{
+        color:white;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(6, 1, 27);
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 99999;
+        transition:.3s;
+       
+    }
+    .showMenu{
+        color:white;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(6, 1, 27);
+        transition:.3s;
+        position: absolute;
+        top: 0;
+        left: 0;
+       z-index: 99999;
+        
+    }
+    .bodyDahbord{
+        height: 100vh;
+        width: 100%;
+       transition:.3s;
+    }
+    
+    .containerInputLogin{
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        width:70%;
+        margin-bottom:5%;
+        padding: 5px;
+        transition:.3s;
+    }
+    .box_login{
+        width:100%;
+        height: 100vh;
+        transition:.3s;
+        
+    }
+    .box_login_img{
+        width:0%;
+        height: 100vh;
+        transition:.3s;
+    }
+    
+}
